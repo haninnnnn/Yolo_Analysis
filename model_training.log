@@ -1,0 +1,29 @@
+======================================================================
+TRAINING PREDICTION MODELS
+======================================================================
+
+Loading data...
+
+Training models for each object...
+----------------------------------------------------------------------
+  Object 0 - Linear         : R²=0.9965, RMSE_X=0.0185, RMSE_Y=0.0109
+  Object 0 - Ridge          : R²=0.9965, RMSE_X=0.0185, RMSE_Y=0.0109
+  Object 0 - RandomForest   : R²=0.9965, RMSE_X=0.0160, RMSE_Y=0.0145
+  Object 0 - GradientBoosting: R²=0.9954, RMSE_X=0.0183, RMSE_Y=0.0168
+Traceback (most recent call last):
+  File "/Users/user/Documents/yolo-analysis/run_prediction_models.py", line 139, in <module>
+    lr_x.fit(X_vel, y_x_all)
+  File "/Users/user/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 1151, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/anaconda3/lib/python3.11/site-packages/sklearn/linear_model/_base.py", line 678, in fit
+    X, y = self._validate_data(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/anaconda3/lib/python3.11/site-packages/sklearn/base.py", line 621, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/user/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1165, in check_X_y
+    check_consistent_length(X, y)
+  File "/Users/user/anaconda3/lib/python3.11/site-packages/sklearn/utils/validation.py", line 409, in check_consistent_length
+    raise ValueError(
+ValueError: Found input variables with inconsistent numbers of samples: [499, 500]
